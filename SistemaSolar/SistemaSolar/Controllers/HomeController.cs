@@ -27,6 +27,13 @@ namespace SistemaSolar.Controllers
 
         public IActionResult SistemaSolar()
         {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return View();
         }
 

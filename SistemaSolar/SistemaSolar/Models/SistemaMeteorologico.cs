@@ -6,6 +6,7 @@
     #region Clase
     public class SistemaMeteorologico
     {
+       
         public string PeriodoSequia { get; set; }
 
         public string PeriodoLluvia { get; set; }

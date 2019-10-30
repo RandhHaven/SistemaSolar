@@ -1,4 +1,4 @@
-﻿namespace EntitySistemaSolar.Planeta
+﻿namespace EntitySistemaSolar.Planetas
 {
     #region Directives
     using EntitySistemaSolar.Enumerados;
@@ -6,7 +6,7 @@
     #endregion
 
     #region Clase
-    class Vulcano : SistemaSolarBase
+    class Vulcano : Planeta
     {
         public override void Initialize()
         {
@@ -15,6 +15,8 @@
                 this.VelocidadAangular = 5;
                 this.Radio = 1000;
                 this.Sentido = EnumSentido.Sentido.Antihorario;
+                this.CoordenadaX = 0;
+                this.CoordenadaY = 0;
             }
             catch (Exception ex)
             {

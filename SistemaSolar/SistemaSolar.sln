@@ -3,13 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaSolar", "SistemaSolar\SistemaSolar.csproj", "{62739F8E-13A6-4B85-9FA2-5E4E4086AC96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaSolar", "SistemaSolar\SistemaSolar.csproj", "{62739F8E-13A6-4B85-9FA2-5E4E4086AC96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{AC6F065C-CFF2-4A87-A4F2-97BBEDE11E25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSSistemaSolar", "WSSistemaSolar\WSSistemaSolar.csproj", "{6688EE79-3BB7-4249-AC5A-4CAAF366FE00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitySistemaSolar", "EntitySistemaSolar\EntitySistemaSolar.csproj", "{FAAF8681-E202-4D20-8153-281E65442A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaSolarBussinesCore", "SistemaSolarBussinesCore\SistemaSolarBussinesCore.csproj", "{ED3D319E-4C3F-4DC4-95FF-86D0FBB02722}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FAAF8681-E202-4D20-8153-281E65442A5C} = {FAAF8681-E202-4D20-8153-281E65442A5C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaSolarCore", "SistemaSolarCore\SistemaSolarCore.csproj", "{B3C08BBB-9660-4297-AFFF-F9A67F44816B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +36,14 @@ Global
 		{FAAF8681-E202-4D20-8153-281E65442A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAAF8681-E202-4D20-8153-281E65442A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAAF8681-E202-4D20-8153-281E65442A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED3D319E-4C3F-4DC4-95FF-86D0FBB02722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED3D319E-4C3F-4DC4-95FF-86D0FBB02722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED3D319E-4C3F-4DC4-95FF-86D0FBB02722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED3D319E-4C3F-4DC4-95FF-86D0FBB02722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C08BBB-9660-4297-AFFF-F9A67F44816B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C08BBB-9660-4297-AFFF-F9A67F44816B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C08BBB-9660-4297-AFFF-F9A67F44816B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C08BBB-9660-4297-AFFF-F9A67F44816B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +51,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6688EE79-3BB7-4249-AC5A-4CAAF366FE00} = {AC6F065C-CFF2-4A87-A4F2-97BBEDE11E25}
 		{FAAF8681-E202-4D20-8153-281E65442A5C} = {AC6F065C-CFF2-4A87-A4F2-97BBEDE11E25}
+		{B3C08BBB-9660-4297-AFFF-F9A67F44816B} = {AC6F065C-CFF2-4A87-A4F2-97BBEDE11E25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A394B653-02DA-4A7F-AB53-5EF0AF0FE9F0}

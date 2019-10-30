@@ -1,20 +1,21 @@
-﻿namespace EntitySistemaSolar.Planeta
-{    
+﻿namespace EntitySistemaSolar.Planetas
+{   
     #region Directives
     using System;
     using EntitySistemaSolar.Enumerados;
     #endregion
 
-    #region Clase 
-    class Betasoide : SistemaSolarBase
+    sealed class Ferengi : Planeta
     {
         public override void Initialize()
         {
             try
             {
-                this.VelocidadAangular = 3;
-                this.Radio = 2000;
+                this.VelocidadAangular = 1;
+                this.Radio = 500;
                 this.Sentido = EnumSentido.Sentido.Horario;
+                this.CoordenadaX = 0;
+                this.CoordenadaY = 0;
             }
             catch (Exception ex)
             {
@@ -22,5 +23,4 @@
             }
         }
     }
-    #endregion
 }
