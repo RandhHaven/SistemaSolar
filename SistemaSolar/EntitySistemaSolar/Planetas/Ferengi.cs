@@ -5,6 +5,7 @@
     using EntitySistemaSolar.Enumerados;
     #endregion
 
+    #region Class
     sealed class Ferengi : Planeta
     {
         public override void Initialize()
@@ -23,4 +24,5 @@
             }
         }
     }
+    #endregion
 }

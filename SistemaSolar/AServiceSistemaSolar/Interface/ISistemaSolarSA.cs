@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaSolarCore
+namespace AServiceSistemaSolar.Interface
 {
-    public class Class1
+    public interface ISistemaSolarSA
     {
     }
 }

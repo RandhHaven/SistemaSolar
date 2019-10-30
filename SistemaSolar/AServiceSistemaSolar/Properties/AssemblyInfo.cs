@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SistemaSolarCore")]
+[assembly: AssemblyTitle("AServiceSistemaSolar")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SistemaSolarCore")]
+[assembly: AssemblyProduct("AServiceSistemaSolar")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b3c08bbb-9660-4297-afff-f9a67f44816b")]
+[assembly: Guid("5327161a-f1e1-403b-bb6a-04073545be90")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2692e3fe-d8bb-4df2-b43c-9629658f7c9b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57127/ServiceSistemaSolar.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceSistemaSolar.xsd" MetadataType="Schema" ID="4660e985-9b07-48ea-810f-ef93a77c2a61" SourceId="1" SourceUrl="http://localhost:57127/ServiceSistemaSolar.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSistemaSolar1.xsd" MetadataType="Schema" ID="98807f4c-efde-47cf-8ac5-75cbe7d16961" SourceId="1" SourceUrl="http://localhost:57127/ServiceSistemaSolar.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceSistemaSolar2.xsd" MetadataType="Schema" ID="e6ce58c4-105f-4465-a01b-2369455e1ed3" SourceId="1" SourceUrl="http://localhost:57127/ServiceSistemaSolar.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSistemaSolar.disco" MetadataType="Disco" ID="3373293a-94fc-4fe8-a9d9-c45a6659b358" SourceId="1" SourceUrl="http://localhost:57127/ServiceSistemaSolar.svc?disco" />
+    <MetadataFile FileName="ServiceSistemaSolar.wsdl" MetadataType="Wsdl" ID="b5754e39-aa02-43f8-a889-03aa8646a89f" SourceId="1" SourceUrl="http://localhost:57127/ServiceSistemaSolar.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
