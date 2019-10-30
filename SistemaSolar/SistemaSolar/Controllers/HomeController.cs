@@ -25,6 +25,7 @@ namespace SistemaSolar.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult SistemaSolar()
         {
             try
@@ -32,6 +33,7 @@ namespace SistemaSolar.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 throw ex;
             }
             return View();
