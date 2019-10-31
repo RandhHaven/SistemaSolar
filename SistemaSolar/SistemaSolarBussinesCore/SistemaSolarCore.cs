@@ -1,25 +1,27 @@
 ﻿namespace SistemaSolarBussinesCore
 {
     using EntitySistemaSolar;
+    using EntitySistemaSolar.Interfaces;
     using System;
-
-    public class SistemaSolarBussinesCore
+    public class SistemaSolarCore
     {
-        public SistemaSolar unSistemaSolar { get; set; }
+        public ISistemaSolar unSistemaSolar { get; set; }
 
-        public SistemaSolarBussinesCore()
+        public SistemaSolarCore()
         {
             try
             {
                 if(Object.Equals(unSistemaSolar, null))
                 {
                     unSistemaSolar = new SistemaSolar();
-                }                
+                }   
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+
     }
 }

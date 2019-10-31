@@ -1,20 +1,21 @@
 ﻿namespace EntitySistemaSolar
 {
     #region Directives
-    using EntitySistemaSolar.Enumerados;
     using EntitySistemaSolar.Interfaces;
+    using EntitySistemaSolar.Planetas;
     #endregion
 
     #region Clase
-    public class SistemaSolar : ISistemaSolar
+    public class SistemaMeteorologico
     {
         #region Properties
-
+        public IPlaneta _IPlaneta { get; set; }
         #endregion
 
-        #region Methods
-        public void Initialize()
+        #region Constructor
+        public SistemaMeteorologico()
         {
+            //_IPlaneta = new Planeta();
         }
         #endregion
     }

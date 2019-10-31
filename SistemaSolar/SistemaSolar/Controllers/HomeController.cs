@@ -25,7 +25,7 @@ namespace SistemaSolar.Controllers
             return View();
         }
 
-        [HttpPost]
+        
         public IActionResult SistemaSolar()
         {
             try

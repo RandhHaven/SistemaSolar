@@ -35,6 +35,7 @@ namespace EntitySistemaSolar
             }
             catch (Exception ex)
             {
+                throw ex;
             }
             return new ArrayList();
         }

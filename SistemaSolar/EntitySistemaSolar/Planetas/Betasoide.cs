@@ -8,6 +8,10 @@
     #region Clase 
     class Betasoide : Planeta
     {
+        public Betasoide()
+        {
+        }
+
         public override void Initialize()
         {
             try

@@ -8,5 +8,6 @@ namespace AServiceSistemaSolar.Interface
 {
     public interface ISistemaSolarSA
     {
+        string ObtenerPeriodosSequia();
     }
 }

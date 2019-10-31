@@ -82,6 +82,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntitySistemaSolar\EntitySistemaSolar.csproj">
+      <Project>{faaf8681-e202-4d20-8153-281e65442a5c}</Project>
+      <Name>EntitySistemaSolar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaSolarBussinesCore\SistemaSolarBussinesCore.csproj">
+      <Project>{ED3D319E-4C3F-4DC4-95FF-86D0FBB02722}</Project>
+      <Name>SistemaSolarBussinesCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

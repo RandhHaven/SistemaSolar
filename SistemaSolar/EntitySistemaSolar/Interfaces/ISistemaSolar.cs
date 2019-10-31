@@ -1,6 +1,6 @@
 ﻿namespace EntitySistemaSolar.Interfaces
 {
-    public interface ISistemaSolarBase
+    public interface ISistemaSolar
     {
         void Initialize();
     }
