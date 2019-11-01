@@ -8,6 +8,7 @@
     #endregion
 
     #region Class
+   
     public class SistemaSolarCore
     {
         public ISistemaSolar unSistemaSolar { get; set; }
@@ -27,9 +28,42 @@
             }
         }
 
-        public List<SistemaSolarCore> GetSistemaSolar()
+        public List<SistemaMeteorologicoBase> GetSistemaSolar(int anios)
         {
-            return new List<SistemaSolarCore>();
+            List<SistemaMeteorologicoBase> listSistema = new List<SistemaMeteorologicoBase>();
+
+            try
+            {
+                listSistema.Add(new SistemaMeteorologicoBase
+                {
+                    Planeta = "Betasoide",
+                    PeriodoSequia = 1234,
+                    PeriodoLluvia = 230,
+                    PeriodoPresionTemperatura = 200,
+                    Anios = anios
+                });
+                listSistema.Add(new SistemaMeteorologicoBase
+                {
+                    Planeta = "Ferengi",
+                    PeriodoSequia = 234,
+                    PeriodoLluvia = 344,
+                    PeriodoPresionTemperatura = 200,
+                    Anios = anios
+                });
+                listSistema.Add(new SistemaMeteorologicoBase
+                {
+                    Planeta = "Vulcano",
+                    PeriodoSequia = 443,
+                    PeriodoLluvia = 343,
+                    PeriodoPresionTemperatura = 200,
+                    Anios = anios
+                });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listSistema;
         }
     }
     #endregion

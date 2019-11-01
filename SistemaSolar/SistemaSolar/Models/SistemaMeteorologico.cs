@@ -1,10 +1,10 @@
 ﻿namespace SistemaSolar.Models
 {
     #region Directives
-    using AServiceSistemaSolar.Interface;
     #endregion
 
     #region Clase
+
     public class SistemaMeteorologico
     {
         #region Properties

@@ -1,5 +1,6 @@
 ﻿namespace SistemaSolar.Controllers
 {
+    #region Properties
     using System;
     using System.Diagnostics;
     using System.Linq;
@@ -8,7 +9,9 @@
     using Microsoft.Extensions.Logging;
     using SistemaSolar.Base;
     using SistemaSolar.Models;
+    #endregion
 
+    #region Controller
     public class HomeController : SistemaSolarController
     {
         public HomeController(ILogger<HomeController> logger)
@@ -33,14 +36,6 @@
 
         public IActionResult SistemaSolar()
         {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-                throw ex;
-            }
             return View();
         }
 
@@ -49,7 +44,7 @@
         {
             try
             {
-                base.GetSistemaMeteorologico(anios);
+                base.CargarTiempoEvaluar(anios);
             }
             catch (Exception ex)
             {
@@ -57,7 +52,6 @@
                 throw ex;
             }
             return RedirectToAction("DetalleSistemaMeteorologico");
-            //return View("DetalleSistemaMeteorologico");
         }
 
         [HttpGet]
@@ -65,7 +59,7 @@
         {
             try
             {
-                //base.GetSistemaMeteorologico(anios);
+                ListaSistemaMeteorologico = base.GetSistemaMeteorologico();
             }
             catch (Exception ex)
             {
@@ -81,4 +75,5 @@
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+    #endregion
 }

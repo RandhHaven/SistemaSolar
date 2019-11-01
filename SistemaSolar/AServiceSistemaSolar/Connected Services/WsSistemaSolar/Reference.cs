@@ -8,74 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AServiceSistemaSolar.WsSistemaSolar {
-    using System.Runtime.Serialization;
-    using System;
+namespace AServiceSistemaSolar.wsSistemaSolar {
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WsSistemaSolar")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WsSistemaSolar.IServiceSistemaSolar")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="wsSistemaSolar.IServiceSistemaSolar")]
     public interface IServiceSistemaSolar {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSistemaSolar/GetData", ReplyAction="http://tempuri.org/IServiceSistemaSolar/GetDataResponse")]
@@ -85,19 +22,19 @@ namespace AServiceSistemaSolar.WsSistemaSolar {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSistemaSolar/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IServiceSistemaSolar/GetDataUsingDataContractResponse")]
-        AServiceSistemaSolar.WsSistemaSolar.CompositeType GetDataUsingDataContract(AServiceSistemaSolar.WsSistemaSolar.CompositeType composite);
+        WsSistemaSolar.CompositeType GetDataUsingDataContract(WsSistemaSolar.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSistemaSolar/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IServiceSistemaSolar/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<AServiceSistemaSolar.WsSistemaSolar.CompositeType> GetDataUsingDataContractAsync(AServiceSistemaSolar.WsSistemaSolar.CompositeType composite);
+        System.Threading.Tasks.Task<WsSistemaSolar.CompositeType> GetDataUsingDataContractAsync(WsSistemaSolar.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceSistemaSolarChannel : AServiceSistemaSolar.WsSistemaSolar.IServiceSistemaSolar, System.ServiceModel.IClientChannel {
+    public interface IServiceSistemaSolarChannel : AServiceSistemaSolar.wsSistemaSolar.IServiceSistemaSolar, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceSistemaSolarClient : System.ServiceModel.ClientBase<AServiceSistemaSolar.WsSistemaSolar.IServiceSistemaSolar>, AServiceSistemaSolar.WsSistemaSolar.IServiceSistemaSolar {
+    public partial class ServiceSistemaSolarClient : System.ServiceModel.ClientBase<AServiceSistemaSolar.wsSistemaSolar.IServiceSistemaSolar>, AServiceSistemaSolar.wsSistemaSolar.IServiceSistemaSolar {
         
         public ServiceSistemaSolarClient() {
         }
@@ -126,11 +63,11 @@ namespace AServiceSistemaSolar.WsSistemaSolar {
             return base.Channel.GetDataAsync(value);
         }
         
-        public AServiceSistemaSolar.WsSistemaSolar.CompositeType GetDataUsingDataContract(AServiceSistemaSolar.WsSistemaSolar.CompositeType composite) {
+        public WsSistemaSolar.CompositeType GetDataUsingDataContract(WsSistemaSolar.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<AServiceSistemaSolar.WsSistemaSolar.CompositeType> GetDataUsingDataContractAsync(AServiceSistemaSolar.WsSistemaSolar.CompositeType composite) {
+        public System.Threading.Tasks.Task<WsSistemaSolar.CompositeType> GetDataUsingDataContractAsync(WsSistemaSolar.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

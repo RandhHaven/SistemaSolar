@@ -1,18 +1,20 @@
-﻿using AServiceSistemaSolar.Interface;
-using System;
+﻿#region Directives
+using AServiceSistemaSolar.Interface;
+using EntitySistemaSolar;
+using System.Collections.Generic;
 using WsSistemaSolar;
+#endregion
 
 namespace AServiceSistemaSolar
 {
-    public class SistemaSolarSA : ISistemaSolarSA
+    public class SistemaSolarSA : AServiceAccess, ISistemaSolarSA
     {
         ServiceSistemaSolar ws = new ServiceSistemaSolar();
 
-        public string ObtenerPeriodosSequia()
-        {            
-            int valor = 2;
-
-            return ws.GetData(valor); 
+        public List<SistemaMeteorologicoBase> ObtenerSistemaMeteorologico(int anios)
+        {
+            result =  ws.GetData(anios);
+            return (List<SistemaMeteorologicoBase>)Deserialize();
         }
     }
 }

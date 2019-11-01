@@ -1,14 +1,15 @@
 ﻿namespace SistemaSolar.Base
 {
-    using AServiceSistemaSolar;
     #region Directives
     using AServiceSistemaSolar.Interface;
+    using EntitySistemaSolar;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
     using SistemaSolar.Controllers;
     using SistemaSolar.Models;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     #endregion
 
     #region Class
@@ -22,12 +23,12 @@
         {
             get
             {
-                object o = ViewData["UnSistema"];               
-                return (Object.Equals(o, null)) ? new SistemaMeteorologico() : (SistemaMeteorologico)ViewData["UnSistema"];
+                object o = TempData["UnSistema"];               
+                return (Object.Equals(o, null)) ? new SistemaMeteorologico() : (SistemaMeteorologico)TempData["UnSistema"];
             }
             set
             {
-                ViewData["UnSistema"] = value;
+                TempData["UnSistema"] = value;
             }
         }
 
@@ -35,12 +36,12 @@
         {
             get
             {
-                object o = ViewData["ListaSistemaMeteorologico"];
-                return (Object.Equals(o, null)) ? new List<SistemaMeteorologico>() : (List<SistemaMeteorologico>)ViewData["ListaSistemaMeteorologico"];
+                object o = TempData["ListaSistemaMeteorologico"];
+                return (Object.Equals(o, null)) ? new List<SistemaMeteorologico>() : (List<SistemaMeteorologico>)TempData["ListaSistemaMeteorologico"];
             }
             set
             {
-                ViewData["ListaSistemaMeteorologico"] = value;
+                TempData["ListaSistemaMeteorologico"] = value;
             }
         }
 
@@ -49,57 +50,49 @@
 
         #region Methods
         public abstract void OnInitialize(ILogger<HomeController> logger);
-               
 
-        public void GetSistemaMeteorologico(int anios)
+        public void CargarTiempoEvaluar(int anios)
+        {
+            UnSistema.Anios = anios;
+        }
+
+        public List<SistemaMeteorologico> GetSistemaMeteorologico()
         {
             List<SistemaMeteorologico> listSistema = new List<SistemaMeteorologico>();
-           
             try
             {
-                //_ISistemaSolarSA.ObtenerPeriodosSequia();
-                listSistema.Add(new SistemaMeteorologico
-                {
-                    NombrePlaneta = "Betasoide",
-                    PeriodoSequia = 1234,
-                    PeriodoLluvia = 230,
-                    PeriodoPresionTemperatura = 200,
-                    Anios = 100
-                });
-                listSistema.Add(new SistemaMeteorologico
-                {
-                    NombrePlaneta = "Ferengi",
-                    PeriodoSequia = 234,
-                    PeriodoLluvia = 344,
-                    PeriodoPresionTemperatura = 200,
-                    Anios = 100
-                });
-                listSistema.Add(new SistemaMeteorologico
-                {
-                    NombrePlaneta = "Vulcano",
-                    PeriodoSequia = 443,
-                    PeriodoLluvia = 343,
-                    PeriodoPresionTemperatura = 200,
-                    Anios = 100
-                });
-                this.ListaSistemaMeteorologico = listSistema;
+                List<SistemaMeteorologicoBase> listSistemaBase = _ISistemaSolarSA.ObtenerSistemaMeteorologico(UnSistema.Anios);
+
+                this.GetSistemaMeteorologicoMappping(listSistemaBase, ref listSistema);
             }
             catch(Exception ex)
             {
                 throw ex;
-            }            
+            }
+            return listSistema;
         }
 
-        public List<SistemaSolarController> GetSistemaMeteorologicoMappping(List<SistemaSolarController> lista)
+        public void GetSistemaMeteorologicoMappping(List<SistemaMeteorologicoBase> listaBase,
+             ref List<SistemaMeteorologico> lista)
         {
             try
             {
+                if (!Object.Equals(listaBase, null) && listaBase.Any())
+                {
+                    lista = listaBase.ConvertAll(sist => new SistemaMeteorologico
+                    {
+                        NombrePlaneta = sist.Planeta,
+                        PeriodoLluvia = sist.PeriodoLluvia,
+                        PeriodoSequia = sist.PeriodoSequia,
+                        PeriodoPresionTemperatura = sist.PeriodoPresionTemperatura,
+                        Anios = sist.Anios
+                    });
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return lista;
         }
         #endregion
     }

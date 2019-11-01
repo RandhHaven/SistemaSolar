@@ -2,18 +2,29 @@
 {
     #region Directives
     using EntitySistemaSolar.Interfaces;
-    using EntitySistemaSolar.Planetas;
+    using System;
     #endregion
 
     #region Clase
-    public class SistemaMeteorologico
+    [Serializable]
+    public class SistemaMeteorologicoBase
     {
         #region Properties
         public IPlaneta _IPlaneta { get; set; }
+
+        public string Planeta { get; set; }
+
+        public int PeriodoSequia { get; set; }
+
+        public int PeriodoLluvia { get; set; }
+
+        public int PeriodoPresionTemperatura { get; set; }
+
+        public int Anios { get; set; }
         #endregion
 
         #region Constructor
-        public SistemaMeteorologico()
+        public SistemaMeteorologicoBase()
         {
             //_IPlaneta = new Planeta();
         }

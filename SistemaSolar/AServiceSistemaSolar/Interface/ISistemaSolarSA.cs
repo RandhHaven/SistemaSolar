@@ -1,12 +1,14 @@
 ﻿namespace AServiceSistemaSolar.Interface
-{
+{    
     #region Directives
+    using System.Collections.Generic;
+    using EntitySistemaSolar;
     #endregion
 
     #region Interface
     public interface ISistemaSolarSA
     {
-        string ObtenerPeriodosSequia();
+        List<SistemaMeteorologicoBase> ObtenerSistemaMeteorologico(int anios);
     }
     #endregion
 }

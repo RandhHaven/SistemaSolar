@@ -44,13 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\ISistemaSolarSA.cs" />
-    <Compile Include="SistemaSolarSA.cs" />
-    <Compile Include="Connected Services\WsSistemaSolar\Reference.cs">
+    <Compile Include="Connected Services\wsSistemaSolar\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ISistemaSolarSA.cs" />
+    <Compile Include="SistemaSolarSA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,43 +58,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\WsSistemaSolar\AServiceSistemaSolar.WsSistemaSolar.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WsSistemaSolar\ServiceSistemaSolar.wsdl" />
-    <None Include="Connected Services\WsSistemaSolar\ServiceSistemaSolar.xsd">
+    <None Include="Connected Services\wsSistemaSolar\ServiceSistemaSolar.wsdl" />
+    <None Include="Connected Services\wsSistemaSolar\ServiceSistemaSolar.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WsSistemaSolar\ServiceSistemaSolar1.xsd">
+    <None Include="Connected Services\wsSistemaSolar\ServiceSistemaSolar1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WsSistemaSolar\ServiceSistemaSolar2.xsd">
+    <None Include="Connected Services\wsSistemaSolar\ServiceSistemaSolar2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\WsSistemaSolar.CompositeType.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\WsSistemaSolar\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WsSistemaSolar\ServiceSistemaSolar.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WsSistemaSolar\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WsSistemaSolar\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WsSistemaSolar\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\EntitySistemaSolar\EntitySistemaSolar.csproj">
+      <Project>{FAAF8681-E202-4D20-8153-281E65442A5C}</Project>
+      <Name>EntitySistemaSolar</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WsSistemaSolar\WsSistemaSolar.csproj">
       <Project>{812008af-c291-485c-9b72-fa9aef9f50d6}</Project>
       <Name>WsSistemaSolar</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\wsSistemaSolar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsSistemaSolar\ServiceSistemaSolar.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsSistemaSolar\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsSistemaSolar\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsSistemaSolar\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

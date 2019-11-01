@@ -14,7 +14,8 @@ namespace WsSistemaSolar
         public string GetData(int value)
         {
             // return string.Format("You entered: {0}", value);
-            return SerializationHelper.SerializeToXmlString(new SistemaSolarCore().GetSistemaSolar());
+            return SerializationHelper.SerializeToBinaryString(new SistemaSolarCore().GetSistemaSolar(value));
+
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
