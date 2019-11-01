@@ -11,8 +11,8 @@ namespace AServiceSistemaSolar
         public string ObtenerPeriodosSequia()
         {            
             int valor = 2;
-            ws.GetData(valor);
-            return String.Empty;
+
+            return ws.GetData(valor); 
         }
     }
 }

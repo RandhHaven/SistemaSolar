@@ -1,8 +1,13 @@
 ﻿namespace SistemaSolarBussinesCore
 {
+    #region Directives
     using EntitySistemaSolar;
     using EntitySistemaSolar.Interfaces;
     using System;
+    using System.Collections.Generic;
+    #endregion
+
+    #region Class
     public class SistemaSolarCore
     {
         public ISistemaSolar unSistemaSolar { get; set; }
@@ -14,7 +19,7 @@
                 if(Object.Equals(unSistemaSolar, null))
                 {
                     unSistemaSolar = new SistemaSolar();
-                }   
+                }
             }
             catch (Exception ex)
             {
@@ -22,6 +27,10 @@
             }
         }
 
-
+        public List<SistemaSolarCore> GetSistemaSolar()
+        {
+            return new List<SistemaSolarCore>();
+        }
     }
+    #endregion
 }

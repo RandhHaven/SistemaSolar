@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AServiceSistemaSolar.Interface
+﻿namespace AServiceSistemaSolar.Interface
 {
+    #region Directives
+    #endregion
+
+    #region Interface
     public interface ISistemaSolarSA
     {
         string ObtenerPeriodosSequia();
     }
+    #endregion
 }

@@ -2,6 +2,8 @@
 {
     using System;
     using System.Diagnostics;
+    using System.Linq;
+    using AServiceSistemaSolar;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
     using SistemaSolar.Base;
@@ -9,7 +11,6 @@
 
     public class HomeController : SistemaSolarController
     {
-
         public HomeController(ILogger<HomeController> logger)
         {
             this.OnInitialize(logger);
@@ -17,6 +18,7 @@
 
         public override void OnInitialize(ILogger<HomeController> logger)
         {
+            _ISistemaSolarSA = new SistemaSolarSA();
             this._logger = logger;
         }
         public IActionResult Index()
@@ -43,7 +45,7 @@
         }
 
         [HttpPost]
-        public IActionResult SistemaSolar(int anios)
+        public RedirectToActionResult SistemaSolar(int anios)
         {
             try
             {
@@ -54,7 +56,8 @@
                 _logger.LogError(ex.Message);
                 throw ex;
             }
-            return View("DetalleSistemaMeteorologico");
+            return RedirectToAction("DetalleSistemaMeteorologico");
+            //return View("DetalleSistemaMeteorologico");
         }
 
         [HttpGet]
@@ -62,14 +65,14 @@
         {
             try
             {
-               
+                //base.GetSistemaMeteorologico(anios);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
                 throw ex;
             }
-            return View();
+            return View(ListaSistemaMeteorologico.ToList());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

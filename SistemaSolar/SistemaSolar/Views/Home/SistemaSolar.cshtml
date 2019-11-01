@@ -1,6 +1,5 @@
 ﻿@model SistemaSolar.Models.SistemaMeteorologico
 
-@using GridMvc.Html
 @{
     ViewData["Title"] = "SistemaSolar";
 }
@@ -16,7 +15,7 @@
                 <div class="form-group">
                     @Html.Label("Anios", "Años: ", new { @class = "control-label" })
                     <div class="col-lg-9">
-                        @Html.TextBoxFor(m => m.PeriodoSequia, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.Anios, new { @class = "form-control" })
                     </div>
                 </div>
 

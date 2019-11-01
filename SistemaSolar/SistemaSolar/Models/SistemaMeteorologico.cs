@@ -9,26 +9,21 @@
     {
         #region Properties
     
-        public string PeriodoSequia { get; set; }
+        public int PeriodoSequia { get; set; }
 
-        public string PeriodoLluvia { get; set; }
+        public int PeriodoLluvia { get; set; }
 
-        public string PeriodoPresionTemperatura { get; set; }
+        public int PeriodoPresionTemperatura { get; set; }
 
         public int Anios { get; set; }
+
+        public string NombrePlaneta { get; set; }
         #endregion
 
         #region Constructor
         public SistemaMeteorologico(int Anios = 0)
         {
             this.Anios = Anios;
-        }
-        #endregion
-
-        #region Methods
-        public void ObtenerResultado(int anios)
-        {
-            
         }
         #endregion
     }
