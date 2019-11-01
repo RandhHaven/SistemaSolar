@@ -1,4 +1,6 @@
 ﻿@model SistemaSolar.Models.SistemaMeteorologico
+
+@using GridMvc.Html
 @{
     ViewData["Title"] = "SistemaSolar";
 }
@@ -7,40 +9,22 @@
 <div>
     @using (Html.BeginForm("SistemaSolar", "Home", FormMethod.Post))
     {
-        <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-6">
-                <h1> Sistema Meteorologico </h1>
-                <form class="login-form">
-                    <div class="form-group">
-                        @Html.Label("PeriodoSequia", "Periodos de Sequia: ", new { @class = "control-label" })
-                        <div class="col-lg-9">
-                            @Html.LabelFor(m => m.PeriodoSequia, new { @class = "form-control" })
-                        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <h1> Sistema Meteorologico </h1>
+            <form class="login-form">
+                <div class="form-group">
+                    @Html.Label("Anios", "Años: ", new { @class = "control-label" })
+                    <div class="col-lg-9">
+                        @Html.TextBoxFor(m => m.PeriodoSequia, new { @class = "form-control" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.Label("PeriodoLluvia", "Periodos de Lluvia", new { @class = "control-label" })
-                        <div class="col-lg-9">
-                            @Html.LabelFor(m => m.PeriodoLluvia, new { @class = "form-control"})
-
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        @Html.Label("PeriodoPresionTemperatura: ", "Periodo Presion Temperatura", new { @class = "control-label" })
-                        <div class="col-lg-9">
-                            @Html.LabelFor(m => m.PeriodoPresionTemperatura, new { @class = "form-control"})
-
-                        </div>
-                    </div>
-
-                    <div>
-                        <input class="btn-primary d-block col-lg-3 form-control" ; type="submit" name="btnSubmit" value="Consultar" />
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-3"></div>
+                <div>
+                    <input class="btn-primary d-block col-lg-3 form-control" ; type="submit" name="btnSubmit" value="Consultar" />
+                </div>
+            </form>
         </div>
+        <div class="col-lg-3"></div>
     }
 </div>

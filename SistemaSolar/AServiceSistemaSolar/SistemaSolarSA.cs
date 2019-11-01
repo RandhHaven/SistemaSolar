@@ -9,8 +9,7 @@ namespace AServiceSistemaSolar
         ServiceSistemaSolar ws = new ServiceSistemaSolar();
 
         public string ObtenerPeriodosSequia()
-        {
-            
+        {            
             int valor = 2;
             ws.GetData(valor);
             return String.Empty;

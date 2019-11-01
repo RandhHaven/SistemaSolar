@@ -8,18 +8,29 @@
     public class SistemaMeteorologico
     {
         #region Properties
-        ISistemaSolarSA _ISistemaSolarSA { get; set; }
-        #endregion
+    
         public string PeriodoSequia { get; set; }
 
         public string PeriodoLluvia { get; set; }
 
         public string PeriodoPresionTemperatura { get; set; }
 
-        public void ObtenerResultado()
-        {
+        public int Anios { get; set; }
+        #endregion
 
+        #region Constructor
+        public SistemaMeteorologico(int Anios = 0)
+        {
+            this.Anios = Anios;
         }
+        #endregion
+
+        #region Methods
+        public void ObtenerResultado(int anios)
+        {
+            
+        }
+        #endregion
     }
     #endregion
 }
