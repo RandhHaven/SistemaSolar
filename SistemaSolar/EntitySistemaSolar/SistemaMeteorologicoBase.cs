@@ -2,6 +2,7 @@
 {
     #region Directives
     using EntitySistemaSolar.Interfaces;
+    using EntitySistemaSolar.Planetas;
     using System;
     #endregion
 
@@ -10,8 +11,7 @@
     public class SistemaMeteorologicoBase
     {
         #region Properties
-        public IPlaneta _IPlaneta { get; set; }
-
+       
         public string Planeta { get; set; }
 
         public int PeriodoSequia { get; set; }
@@ -26,7 +26,7 @@
         #region Constructor
         public SistemaMeteorologicoBase()
         {
-            //_IPlaneta = new Planeta();
+           
         }
         #endregion
     }

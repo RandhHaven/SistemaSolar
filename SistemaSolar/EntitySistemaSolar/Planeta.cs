@@ -1,17 +1,14 @@
-﻿using EntitySistemaSolar.Enumerados;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EntitySistemaSolar
+﻿namespace EntitySistemaSolar
 {
-    public abstract class Planeta
+    using EntitySistemaSolar.Enumerados;
+    using System;
+    using System.Collections;
+    using EntitySistemaSolar.Interfaces;
+
+    public abstract class Planeta: IPlaneta
     {
         #region Properties
-        public virtual int VelocidadAangular { get; set; }
+        public virtual int VelocidadAngular { get; set; }
 
         public virtual int Radio { get; set; }
 
@@ -23,10 +20,12 @@ namespace EntitySistemaSolar
         public virtual int CoordenadaX { get; set; }
 
         public virtual int CoordenadaY { get; set; }
+
+        public virtual int CantidadDias { get; set; }
         #endregion
 
         #region Methods
-        public abstract void Initialize();
+        public abstract void Initialize(int anios);
 
         public virtual ArrayList GetPosicion()
         {
@@ -39,6 +38,12 @@ namespace EntitySistemaSolar
             }
             return new ArrayList();
         }
+
+        public virtual ArrayList GetPosicionDia(int tiempo)
+        {
+            return new ArrayList();
+        }
+       
         #endregion
     }
 }

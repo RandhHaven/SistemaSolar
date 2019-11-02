@@ -30,10 +30,11 @@
 
         public List<SistemaMeteorologicoBase> GetSistemaSolar(int anios)
         {
-            List<SistemaMeteorologicoBase> listSistema = new List<SistemaMeteorologicoBase>();
+            List<SistemaMeteorologicoBase> listSistema = new List<SistemaMeteorologicoBase>();           
 
             try
             {
+                unSistemaSolar.Initialize(anios);
                 listSistema.Add(new SistemaMeteorologicoBase
                 {
                     Planeta = "Betasoide",

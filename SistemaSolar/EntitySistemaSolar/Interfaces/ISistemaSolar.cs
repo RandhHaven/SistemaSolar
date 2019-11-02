@@ -2,6 +2,6 @@
 {
     public interface ISistemaSolar
     {
-        void Initialize();
+        void Initialize(int anios);
     }
 }

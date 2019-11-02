@@ -3,26 +3,51 @@
     #region Directives
     using EntitySistemaSolar.Enumerados;
     using System;
+    using System.Collections;
     #endregion
 
     #region Clase
-    class Vulcano : Planeta
+    sealed class Vulcano : Planeta
     {
-        public override void Initialize()
+        #region Constructor
+        public Vulcano() : base()
+        {
+
+        }
+        #endregion
+
+        #region Methods
+        public override void Initialize(int anios)
         {
             try
             {
-                this.VelocidadAangular = 5;
+                this.VelocidadAngular = 5;
                 this.Radio = 1000;
                 this.Sentido = EnumSentido.Sentido.Antihorario;
                 this.CoordenadaX = 0;
                 this.CoordenadaY = 0;
+                this.CantidadDias = (anios * (360 / this.VelocidadAngular));
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        public override ArrayList GetPosicionDia(int tiempo)
+        {
+            {
+                try
+                {
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                return new ArrayList();
+            }
+        }
+        #endregion
     }
     #endregion
 }

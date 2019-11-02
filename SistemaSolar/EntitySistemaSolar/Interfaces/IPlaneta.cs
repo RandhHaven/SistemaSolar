@@ -1,8 +1,7 @@
-﻿
-namespace EntitySistemaSolar.Interfaces
+﻿namespace EntitySistemaSolar.Interfaces
 {
     public interface IPlaneta
     {
-        void Initialize();
+        void Initialize(int anios);
     }
 }

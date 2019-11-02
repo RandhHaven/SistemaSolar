@@ -30,7 +30,6 @@
             set
             {
                 HttpContext.Session.SetObject("UnSistema", value);
-                //TempData["UnSistema"] = value;
             }
         }
 
