@@ -5,6 +5,7 @@
     using System.Diagnostics;
     using System.Linq;
     using AServiceSistemaSolar;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
     using SistemaSolar.Base;
@@ -44,6 +45,7 @@
         {
             try
             {
+                HttpContext.Session.SetString("Test", "Ben Rules!");
                 base.CargarTiempoEvaluar(anios);
             }
             catch (Exception ex)

@@ -10,6 +10,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.AspNetCore.Http;
     #endregion
 
     #region Class
@@ -17,18 +18,19 @@
     {
         #region Properties
         public ISistemaSolarSA _ISistemaSolarSA { get; set; }
-
-
+        
         public SistemaMeteorologico UnSistema
         {
             get
             {
-                object o = TempData["UnSistema"];               
-                return (Object.Equals(o, null)) ? new SistemaMeteorologico() : (SistemaMeteorologico)TempData["UnSistema"];
+                 
+                object o = HttpContext.Session.GetObject<SistemaMeteorologico>("UnSistema");
+                return (Object.Equals(o, null)) ? new SistemaMeteorologico() : (SistemaMeteorologico)o;
             }
             set
             {
-                TempData["UnSistema"] = value;
+                HttpContext.Session.SetObject("UnSistema", value);
+                //TempData["UnSistema"] = value;
             }
         }
 
@@ -61,7 +63,7 @@
             List<SistemaMeteorologico> listSistema = new List<SistemaMeteorologico>();
             try
             {
-                List<SistemaMeteorologicoBase> listSistemaBase = _ISistemaSolarSA.ObtenerSistemaMeteorologico(UnSistema.Anios);
+                List<SistemaMeteorologicoBase> listSistemaBase = _ISistemaSolarSA.ObtenerSistemaMeteorologico(10);
 
                 this.GetSistemaMeteorologicoMappping(listSistemaBase, ref listSistema);
             }
