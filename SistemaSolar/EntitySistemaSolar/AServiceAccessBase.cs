@@ -3,8 +3,7 @@
     #region Directives
     using EntitySistemaSolar.Helpers;
     #endregion
-
-
+    
     public abstract class AServiceAccess
     {
         protected bool lresult;
