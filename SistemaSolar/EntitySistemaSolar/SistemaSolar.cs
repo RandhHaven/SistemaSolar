@@ -1,8 +1,11 @@
 ﻿namespace EntitySistemaSolar
-{
+{   
     #region Directives
     using EntitySistemaSolar.Interfaces;
     using EntitySistemaSolar.Planetas;
+    using System.Collections.Generic;
+    using System;
+    using EntitySistemaSolar.Figuras;
     #endregion
 
     #region Clase
@@ -14,6 +17,8 @@
         public IPlaneta _IPlanetaBetasoide { get; set; }
 
         public IPlaneta _IPlanetaFerengi { get; set; }
+
+        public IRecta _IRecta { get; set; }
         #endregion
 
         #region Constructor
@@ -22,6 +27,7 @@
             _IPlanetaVulcano = new Vulcano();
             _IPlanetaBetasoide = new Betasoide();
             _IPlanetaFerengi = new Ferengi();
+            
         }
         #endregion
 
@@ -41,6 +47,14 @@
 
         public bool IsRecta(Planeta unPlaneta)
         {
+            try
+            {
+                _IRecta = new Recta();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return false;
         }
 
@@ -48,6 +62,27 @@
         {
 
         }
+
+        /// <summary>
+        /// Recorro la cantidad de dias de cada planeta y por cada dia voy verificando si entre los 3 planetas forman una recta
+        /// en caso contrario si no forman una recta, forman un triangulo.
+        /// </summary>
+        /// <returns></returns>
+        public List<SistemaMeteorologicoBase> CargarSistemaMeteorologico()
+        {
+            for (int i = 0; i < _IPlanetaBetasoide.CantidadDias; i++)
+            {
+                for (int j = 0; i < _IPlanetaVulcano.CantidadDias; j++)
+                {
+                    for (int k = 0; i < _IPlanetaFerengi.CantidadDias; k++)
+                    {
+
+                    }
+                }
+            }
+            return new List<SistemaMeteorologicoBase>();
+        }
+
         #endregion
     }
     #endregion

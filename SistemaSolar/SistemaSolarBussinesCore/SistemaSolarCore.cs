@@ -28,13 +28,20 @@
             }
         }
 
+        /// <summary>
+        /// Obtiene el listado por Planeta del Sistema Meteorologico de cada planeta en base a la cantidad de años.
+        /// </summary>
+        /// <param name="anios"></param>
+        /// <returns></returns>
         public List<SistemaMeteorologicoBase> GetSistemaSolar(int anios)
         {
             List<SistemaMeteorologicoBase> listSistema = new List<SistemaMeteorologicoBase>();           
 
             try
             {
-                unSistemaSolar.Initialize(anios);
+                
+                unSistemaSolar.Initialize(anios);                
+                listSistema = unSistemaSolar.CargarSistemaMeteorologico();
                 listSistema.Add(new SistemaMeteorologicoBase
                 {
                     Planeta = "Betasoide",

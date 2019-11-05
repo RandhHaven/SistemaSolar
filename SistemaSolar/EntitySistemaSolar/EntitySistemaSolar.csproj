@@ -71,6 +71,7 @@
     <Compile Include="Figuras\Recta.cs" />
     <Compile Include="Helpers\SerializationHelper.cs" />
     <Compile Include="Interfaces\IPlaneta.cs" />
+    <Compile Include="Interfaces\IRecta.cs" />
     <Compile Include="Interfaces\ISistemaSolar.cs" />
     <Compile Include="Planeta.cs" />
     <Compile Include="Planetas\Betasoide.cs" />
