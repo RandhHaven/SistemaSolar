@@ -2,5 +2,8 @@
 {
     public interface IRecta
     {
+        bool ValidarSiEstaEnRecta();
+
+        void ConstruirEcuacionRecta();
     }
 }

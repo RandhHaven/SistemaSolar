@@ -70,13 +70,13 @@
         /// <returns></returns>
         public List<SistemaMeteorologicoBase> CargarSistemaMeteorologico()
         {
-            for (int i = 0; i < _IPlanetaBetasoide.CantidadDias; i++)
+            for (int iDias = 0; iDias < _IPlanetaBetasoide.CantidadDias; iDias++)
             {
-                for (int j = 0; i < _IPlanetaVulcano.CantidadDias; j++)
+                for (int jDias = 0; jDias < _IPlanetaVulcano.CantidadDias; jDias++)
                 {
-                    for (int k = 0; i < _IPlanetaFerengi.CantidadDias; k++)
+                    for (int kDias = 0; kDias < _IPlanetaFerengi.CantidadDias; kDias++)
                     {
-
+                        _IPlanetaFerengi.CalcularCoordenadas(kDias);
                     }
                 }
             }

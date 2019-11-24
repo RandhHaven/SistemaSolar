@@ -23,6 +23,10 @@ namespace EntitySistemaSolar.Interfaces
 
         #region Methods
         void Initialize(int anios);
+
+        void GetPosition(int dias, ref int coordx, ref int coordy);
+
+        void CalcularCoordenadas(int dias);
         #endregion
     }
 }

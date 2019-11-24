@@ -27,7 +27,18 @@
         #region Methods
         public abstract void Initialize(int anios);
 
-        public virtual ArrayList GetPosicion()
+        public void GetPosition(int dias, ref int coordx, ref int coordy)
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }           
+        }
+
+        public void CalcularCoordenadas(int dias)
         {
             try
             {
@@ -36,14 +47,7 @@
             {
                 throw ex;
             }
-            return new ArrayList();
         }
-
-        public virtual ArrayList GetPosicionDia(int tiempo)
-        {
-            return new ArrayList();
-        }
-       
         #endregion
     }
 }

@@ -34,19 +34,7 @@
             }
         }
 
-        public override ArrayList GetPosicionDia(int tiempo)
-        {
-            {
-                try
-                {
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                return new ArrayList();
-            }
-        }
+        
         #endregion
     }
     #endregion
